@@ -18,4 +18,12 @@ Command line for the win
 16. Print all matching lines (without the filename or the file path) in all files under the current directory that start with "access.log" that contain the string "500". R// grep -r -h "500" --include access.log
 17. Extract all IP addresses from files that start with "access.log" printing one IP address per line R// grep -ro ^[0-9.]* --include access.log
 18. Count the number of files in the current working directory. Print the number of files as a single integer R// ls -l | wc -l
-19. 
+19. Print the contents of access.log sorted R// sort access.log
+20. Print the number of lines in access.log that contain the string "GET". R// grep -c GET access.log
+21. The file split-me.txt contains a list of numbers separated by a ; character. Split the numbers on the ; character, one number per line. R// tr ';' '\n' < split-me.txt
+22. Print the numbers 1 to 100 separated by spaces. R//> echo {1..100}
+23. This challenge has text files (with a .txt extension) that contain the phrase "challenges are difficult". Delete this phrase from all text files recursively. R// sed -i 'challenge are difficult/d' **/*.txt
+24. The file sum-me.txt has a list of numbers, one per line. Print the sum of these numbers. R// cat sum-me.txt | xargs | sed -e 's/\ /+/g' | bc 42
+25. Print all files in the current directory recursively without the leading directory path R// find . -type f -printf "%f\n"
+26. Rename all files removing the extension from them in the current directory recursively R// find * -type f | rename 's/\..*//'
+27. The files in this challenge contain spaces. List all of the files (filenames only) in the current directory but replace all spaces with a '.' character. R// ls | tr ' ' '.'
