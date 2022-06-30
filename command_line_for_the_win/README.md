@@ -1,4 +1,4 @@
-Command line for the win
+# Command line for the win
 
 1. Your first challenge is to print "hello world" on the terminal in a single command. R// echo hello world o printf “hello world”
 2. Print the current working directory. R// echo $(pwd)
